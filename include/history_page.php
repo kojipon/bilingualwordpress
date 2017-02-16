@@ -76,26 +76,24 @@ EOD;
             return <<<EOD
 <div class="wrap">
     <h1>Bilingual Transaction Logs</h1>
-    <form action="" method="post">
-        <table class="wp-list-table widefat">
-            <thead>
-                <tr>
-                    <th colspan="6"><b>Transaction Logs</b>&nbsp;<small>(Display upto {$data['history_num']} settings)</small></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th></th>
-                    <th>Original Title</th>
-                    <th>Date</th>
-                    <th>Language</th>
-                    <th>Note</th>
-                    <th></th>
-                </tr>
-                {$data['history_rows']}
-            </tbody>
-        </table>
-    </form>
+    <table class="wp-list-table widefat">
+        <thead>
+            <tr>
+                <th colspan="6"><b>Transaction Logs</b>&nbsp;<small>(Display upto {$data['history_num']} settings)</small></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th></th>
+                <th>Original Title</th>
+                <th>Date</th>
+                <th>Language</th>
+                <th>Note</th>
+                <th></th>
+            </tr>
+            {$data['history_rows']}
+        </tbody>
+    </table>
 </div>
 EOD;
         }

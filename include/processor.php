@@ -39,16 +39,13 @@ if (! class_exists('Bilingual_Processor')) {
             $active_settings = Bilingual_Settings::get_active();
             foreach ($active_settings as $settings) {
                 if ($this->is_target_status($input_post_id, $settings)) {
-                    continue;
+                    if ($this->is_target_category($input_post_id, $settings)) {
+                        $this->translate($input_post_id, $settings);
+                    }
                 }
-                if ($this->is_target_category($input_post_id, $settings)) {
-                    continue;
-                }
-
-                $this->translate($input_post_id, $settings);
             }
 
-            $this->before_action($input_post_id);
+            $this->after_action($input_post_id);
         }
 
         private function after_action($input_post_id)
@@ -114,14 +111,10 @@ if (! class_exists('Bilingual_Processor')) {
             $categories         = get_the_category($input_post_id);
             $is_target_category = false;
 
-            if (isset($settings->input_category)) {
-                foreach ($categories as $category) {
-                    if ($category->{'term_id'} == $settings->input_category) {
-                        $is_target_category = true;
-                    }
+            foreach ($categories as $category) {
+                if ($category->{'term_id'} == $settings->input_category) {
+                    $is_target_category = true;
                 }
-            } else {
-                $is_target_category = false;
             }
 
             return $is_target_category;
@@ -129,18 +122,8 @@ if (! class_exists('Bilingual_Processor')) {
 
         public function is_target_status($input_post_id, $settings)
         {
-            $is_target_status = false;
-            $input_post_data  = get_post($input_post_id);
-
-            if (isset($settings->input_status) && isset($input_post_data->post_status)) {
-                if ($settings->input_status == $input_post_data->post_status) {
-                    $is_target_status = true;
-                }
-            } else {
-                $is_target_status = false;
-            }
-
-            return $is_target_status;
+            $input_post_data = get_post($input_post_id);
+            return ($settings->input_status == $input_post_data->post_status);
         }
 
         public function set_menu_pages()
