@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: BilingualWordPress
-Plugin URI: https://github.com/kojipon/wp-plugin-bilingual
+Plugin URI: https://github.com/kojipon/bilingualwordpress
 Description: This plugin translates the new Wordpress page into another language and creates a new page.
 Author: KOJIPON <kojipon@gmail.com>
 Version: 1.0.0
