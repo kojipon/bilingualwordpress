@@ -87,14 +87,14 @@ if (! class_exists('Bilingual_Translator')) {
 
         private function gen_google_translate_api_url()
         {
-            return urlencode(BILINGUAL_GOOGLE_API_URL .
+            return BILINGUAL_GOOGLE_API_URL .
                 '?key=' .
-                $this->settings->api_token .
+                urlencode($this->settings->api_token) .
                 '&source=' .
-                $this->settings->input_language .
+                urlencode($this->settings->input_language) .
                 '&target=' .
-                $this->settings->output_language .
-                '&format=html&prettyprint=false&q=');
+                urlencode($this->settings->output_language) .
+                '&format=html&prettyprint=false&q=';
         }
     }
 }
