@@ -24,16 +24,16 @@ Supported langueges: https://cloud.google.com/translate/docs/languages
 
 You can translate pages of a specific category into other languages. You can add multiple translation settings.
 
-！[list_settings_page](/docs/images/list_settings_page.png) 
+![list_settings_page](/docs/images/list_settings_page.png)
 
 ## Detail Settings
 
 You can choose to draft, publish, or private pages to be translated. You can set Google API Token for each setting.
 
-！[detail_settings_page](/docs/images/detail_settings_page.png) 
+![detail_settings_page](/docs/images/detail_settings_page.png) 
 
 ## History
 
 You can view the translated page list. You can also rerun failed translations.
 
-！[history_page](/docs/images/history_page.png) 
+![history_page](/docs/images/history_page.png) 
