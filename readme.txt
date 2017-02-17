@@ -1,4 +1,4 @@
-=== Plugin Name ===
+=== BilingualWordPress ===
 Contributors: kojipon
 Donate link: https://github.com/kojipon/bilingualwordpress
 Tags: wordpress, wordpress-plugin, php
@@ -11,7 +11,6 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 == Description ==
 This plug-in translates article pages already created in Wordpress into English, Chinese, etc. using the Google Translate API service, and creates a new Wordpress article page. This plug-in can reduce translation labor in wordpress site management.
 Google Translate API registration is required. Also, costs will be incurred by using API.
-Supported langueges: https://cloud.google.com/translate/docs/languages
 
 == Installation ==
 1. Setup Google Translate API and get API Token.
@@ -20,18 +19,25 @@ Supported langueges: https://cloud.google.com/translate/docs/languages
 4. Select "Menu -> Bilingual -> AllSettings" on your Wordpress administration screen.
 5. Select "Edit" button and enter the detailed settings.
 
+== Frequently Asked Questions ==
+= Which languages are supported for translation? =
+Supported langueges: https://cloud.google.com/translate/docs/languages
+
+= How much does it cost in Google Translate API? =
+Pricing: https://cloud.google.com/translate/pricing
+
 == Screenshots ==
 = All Settings =
 You can translate pages of a specific category into other languages. You can add multiple translation settings.
-/docs/images/list_settings_page.png
+![list_settings_page](https://github.com/kojipon/bilingualwordpress/raw/master/docs/images/list_settings_page.png）
 
 = Detail Settings =
 You can choose to draft, publish, or private pages to be translated. You can set Google API Token for each setting.
-/docs/images/detail_settings_page.png
+![detail_settings_page](https://github.com/kojipon/bilingualwordpress/raw/master/docs/images/detail_settings_page.png)
 
 = History =
 You can view the translated page list. You can also rerun failed translations.
-/docs/images/history_page.png
+![history_page](https://github.com/kojipon/bilingualwordpress/raw/master/docs/images/history_page.png)
 
 == Changelog ==
 
